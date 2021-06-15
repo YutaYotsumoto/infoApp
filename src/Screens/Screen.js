@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import {SafeAreaView, View} from 'react-native';
+import {SafeAreaView, ScrollView, View} from 'react-native';
 
 import axios from 'axios';
 
 import Header from '../commponents/Header/Header';
-import Profile from '../commponents/Profile';
+import Profile from '../commponents/Profile/Profile';
 
 const Screen = () => {
   const [users, setUsers] = useState([]);
@@ -26,7 +26,18 @@ const Screen = () => {
     <SafeAreaView backgroundColor="skyblue">
       <View backgroundColor="white">
         <Header text="Users" />
-        <Profile />
+        <ScrollView>
+          <Profile name="Name" id="Id" city="City" street="Street" />
+          <Profile name="Name" id="Id" city="City" street="Street" />
+          <Profile name="Name" id="Id" city="City" street="Street" />
+          <Profile name="Name" id="Id" city="City" street="Street" />
+          <Profile name="Name" id="Id" city="City" street="Street" />
+          <Profile name="Name" id="Id" city="City" street="Street" />
+          <Profile name="Name" id="Id" city="City" street="Street" />
+          <Profile name="Name" id="Id" city="City" street="Street" />
+          <Profile name="Name" id="Id" city="City" street="Street" />
+          <Profile name="Name" id="Id" city="City" street="Street" />
+        </ScrollView>
       </View>
     </SafeAreaView>
   );

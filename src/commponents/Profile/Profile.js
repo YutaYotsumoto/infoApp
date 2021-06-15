@@ -1,18 +1,15 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const Profile = () => {
+import Top from './Top/Top';
+import Details from './Details/Details';
+
+const Profile = ({name, id, city, street}) => {
   return (
     <View style={styles.frame}>
-      <View style={styles.header}>
-        <Text style={[styles.font, {marginVertical: 20}]}>name</Text>
-      </View>
+      <Top name={name} />
 
-      <View style={styles.body}>
-        <Text style={styles.font}>id</Text>
-        <Text style={styles.font}>city</Text>
-        <Text style={styles.font}>street</Text>
-      </View>
+      <Details id={id} city={city} street={street} />
     </View>
   );
 };
@@ -20,19 +17,28 @@ const Profile = () => {
 const styles = StyleSheet.create({
   frame: {
     borderWidth: 1,
-    borderColor: 'grey',
+    borderColor: 'black',
     borderRadius: 10,
     width: 350,
-    height: 300,
+    height: 240,
     margin: 20,
   },
   header: {
     borderBottomWidth: 1,
-    borderColor: 'gray',
+    borderColor: 'black',
+    paddingVertical: 20,
   },
-  body: {
-    marginVertical: 30,
+  topArea: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
   },
+  Icon: {
+    width: 50,
+    height: 50,
+    marginHorizontal: 20,
+  },
+
   font: {
     fontSize: 30,
     fontStyle: 'italic',
