@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const Details = ({id, city, street}) => {
+const Body = ({id, city, street}) => {
   return (
     <View>
       <Text style={styles.font}>{id}</Text>
@@ -13,7 +13,7 @@ const Details = ({id, city, street}) => {
 
 const styles = StyleSheet.create({
   font: {
-    fontSize: 30,
+    fontSize: 15,
     fontStyle: 'italic',
     fontWeight: 'bold',
     color: 'black',
@@ -21,4 +21,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Details;
+export default Body;

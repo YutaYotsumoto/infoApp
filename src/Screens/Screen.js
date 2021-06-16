@@ -27,16 +27,7 @@ const Screen = () => {
       <View backgroundColor="white">
         <Header text="Users" />
         <ScrollView>
-          <Profile name="Name" id="Id" city="City" street="Street" />
-          <Profile name="Name" id="Id" city="City" street="Street" />
-          <Profile name="Name" id="Id" city="City" street="Street" />
-          <Profile name="Name" id="Id" city="City" street="Street" />
-          <Profile name="Name" id="Id" city="City" street="Street" />
-          <Profile name="Name" id="Id" city="City" street="Street" />
-          <Profile name="Name" id="Id" city="City" street="Street" />
-          <Profile name="Name" id="Id" city="City" street="Street" />
-          <Profile name="Name" id="Id" city="City" street="Street" />
-          <Profile name="Name" id="Id" city="City" street="Street" />
+          <Profile name="りんごちゃん" id="0123" city="東京" street="赤坂" />
         </ScrollView>
       </View>
     </SafeAreaView>
