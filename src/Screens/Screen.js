@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {SafeAreaView, ScrollView, View} from 'react-native';
+import {SafeAreaView, ScrollView, View, FlatList} from 'react-native';
 
 import axios from 'axios';
 
@@ -11,23 +11,33 @@ const Screen = () => {
 
   // useEffect関数内のaxiosでWebAPI取得
   useEffect(() => {
-    const getInfo = async () => {
+    const getApi = async () => {
       const response = await axios.get(
         'https://jsonplaceholder.typicode.com/users',
       );
       const datas = response.data;
+      setUsers(datas); //配列データ保存 usersが配列を保持
       console.log(datas);
     };
-    getInfo();
+    getApi();
   }, []);
-  //22: []＝＞useStateによる状態の更新時に useEffectを走らせない設定
 
   return (
     <SafeAreaView backgroundColor="skyblue">
       <View backgroundColor="white">
         <Header text="Users" />
         <ScrollView>
-          <Profile name="りんごちゃん" id="0123" city="東京" street="赤坂" />
+          <FlatList
+            data={users}
+            renderItem={({item}) => (
+              <Profile
+                name={item.name}
+                id={item.id}
+                city={item.address.city}
+                street={item.address.street}
+              />
+            )}
+          />
         </ScrollView>
       </View>
     </SafeAreaView>
