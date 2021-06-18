@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 
-const Top = ({name}) => {
+const Head = ({name}) => {
   return (
     <View style={[styles.header, styles.topArea]}>
       <Image style={styles.Icon} source={require('../../../Icon/Icon.png')} />
@@ -11,14 +11,6 @@ const Top = ({name}) => {
 };
 
 const styles = StyleSheet.create({
-  frame: {
-    borderWidth: 1,
-    borderColor: 'black',
-    borderRadius: 10,
-    width: 350,
-    height: 240,
-    margin: 20,
-  },
   header: {
     borderBottomWidth: 1,
     borderColor: 'black',
@@ -30,13 +22,13 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   Icon: {
-    width: 50,
-    height: 50,
+    width: 30,
+    height: 30,
     marginHorizontal: 20,
   },
 
   font: {
-    fontSize: 30,
+    fontSize: 15,
     fontStyle: 'italic',
     fontWeight: 'bold',
     color: 'black',
@@ -44,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Top;
+export default Head;
