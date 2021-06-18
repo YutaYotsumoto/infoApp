@@ -16,7 +16,7 @@ const Profile = ({name, id, city, street}) => {
 const styles = StyleSheet.create({
   frame: {
     borderWidth: 1,
-    borderColor: 'black',
+    borderColor: 'grey',
     borderRadius: 10,
     width: 350,
     height: 200,

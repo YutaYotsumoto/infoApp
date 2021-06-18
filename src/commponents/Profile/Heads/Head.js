@@ -13,7 +13,7 @@ const Head = ({name}) => {
 const styles = StyleSheet.create({
   header: {
     borderBottomWidth: 1,
-    borderColor: 'black',
+    borderColor: 'grey',
     paddingVertical: 20,
   },
   topArea: {
@@ -22,14 +22,14 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   Icon: {
-    width: 30,
-    height: 30,
+    width: 35,
+    height: 35,
     marginHorizontal: 20,
   },
 
   font: {
-    fontSize: 15,
-    fontStyle: 'italic',
+    fontSize: 20,
+    // fontStyle: 'italic',
     fontWeight: 'bold',
     color: 'black',
     margin: 5,

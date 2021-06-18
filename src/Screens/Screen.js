@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {SafeAreaView, ScrollView, View, FlatList} from 'react-native';
+import {SafeAreaView, View, FlatList, StyleSheet} from 'react-native';
 
 import axios from 'axios';
 
@@ -24,24 +24,30 @@ const Screen = () => {
 
   return (
     <SafeAreaView backgroundColor="skyblue">
-      <View backgroundColor="white">
-        <Header text="Users" />
-        <ScrollView>
-          <FlatList
-            data={users}
-            renderItem={({item}) => (
-              <Profile
-                name={item.name}
-                id={item.id}
-                city={item.address.city}
-                street={item.address.street}
-              />
-            )}
-          />
-        </ScrollView>
+      <View style={styles.view} backgroundColor="white">
+        <Header text="Profiles" />
+        <FlatList
+          data={users}
+          renderItem={({item}) => (
+            <Profile
+              name={item.name}
+              id={item.id}
+              city={item.address.city}
+              street={item.address.street}
+            />
+          )}
+        />
       </View>
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  view: {
+    height: '100%',
+    // paddingBottom: 30,
+    marginBottom: 34,
+  },
+});
 
 export default Screen;
