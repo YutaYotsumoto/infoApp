@@ -4,9 +4,9 @@ import {View, Text, StyleSheet} from 'react-native';
 const Body = ({id, city, street}) => {
   return (
     <View>
-      <Text style={styles.font}>{id}</Text>
-      <Text style={styles.font}>{city}</Text>
-      <Text style={styles.font}>{street}</Text>
+      <Text style={styles.font}>id: {id}</Text>
+      <Text style={styles.font}>city: {city}</Text>
+      <Text style={styles.font}>street: {street}</Text>
     </View>
   );
 };
