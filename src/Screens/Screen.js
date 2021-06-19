@@ -27,6 +27,7 @@ const Screen = () => {
       <View style={styles.view} backgroundColor="white">
         <Header text="Profiles" />
         <FlatList
+          keyExtractor={item => item.id}
           data={users}
           renderItem={({item}) => (
             <Profile
