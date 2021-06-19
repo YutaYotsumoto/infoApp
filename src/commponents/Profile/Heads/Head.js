@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
 
   font: {
     fontSize: 20,
-    // fontStyle: 'italic',
     fontWeight: 'bold',
     color: 'black',
     margin: 5,
