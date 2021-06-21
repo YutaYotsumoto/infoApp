@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   frame: {
     borderWidth: 1,
     borderColor: 'grey',
-    borderRadius: 10,
+    borderRadius: 30,
     width: 350,
     height: 200,
     margin: 20,
