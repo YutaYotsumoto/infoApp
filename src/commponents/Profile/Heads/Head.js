@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: 'grey',
     paddingVertical: 20,
+    overflow: 'visible',
   },
   topArea: {
     flexDirection: 'row',
