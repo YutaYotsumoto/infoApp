@@ -6,6 +6,7 @@ import axios from 'axios';
 import Header from '../commponents/Header/Header';
 import Profile from '../commponents/Profile/Profile';
 import SearchBar from '../commponents/searchBar/searchBar';
+import Footer from '../commponents/footer/footer';
 
 const Screen = () => {
   const [users, setUsers] = useState([]);
@@ -26,7 +27,7 @@ const Screen = () => {
   return (
     <SafeAreaView backgroundColor="tomato">
       <View style={styles.view} backgroundColor="white">
-        <Header text="Profiles" />
+        <Header text="Followers" />
         <SearchBar />
         <FlatList
           keyExtractor={item => item.id}
@@ -40,6 +41,7 @@ const Screen = () => {
             />
           )}
         />
+        <Footer />
       </View>
     </SafeAreaView>
   );
