@@ -13,7 +13,7 @@ const Head = ({name}) => {
 const styles = StyleSheet.create({
   header: {
     borderBottomWidth: 1,
-    borderColor: 'grey',
+    borderColor: 'darkgrey',
     paddingVertical: 20,
     overflow: 'visible',
   },
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: 'black',
+    width: 260,
     margin: 5,
   },
 });

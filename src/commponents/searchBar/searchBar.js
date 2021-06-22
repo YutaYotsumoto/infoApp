@@ -3,23 +3,30 @@ import {View, StyleSheet, TextInput, Image} from 'react-native';
 
 const SearchBar = () => {
   return (
-    <View style={[styles.barStyle, styles.inSearch]}>
-      <Image style={styles.Icon} source={require('../../Icon/Search.png')} />
-      <TextInput style={styles.bar} placeholder={'テキストを入力'} />
+    <View style={styles.barBase}>
+      <View style={[styles.barStyle, styles.inSearch]}>
+        <Image style={styles.Icon} source={require('../../Icon/Search.png')} />
+        <TextInput style={styles.bar} placeholder={'テキストを入力'} />
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  barBase: {
+    borderBottomWidth: 1,
+    borderColor: 'darkgrey',
+    // backgroundColor: '',
+  },
   barStyle: {
-    height: 40,
-    width: 250,
+    height: 32,
+    width: 350,
     borderWidth: 1,
-    borderColor: 'grey',
-    borderRadius: 20,
-    marginTop: 10,
+    borderColor: 'darkgrey',
+    borderRadius: 8,
+    marginVertical: 8,
     marginHorizontal: 20,
-    // overflow: 'hidden',
+    overflow: 'hidden',
   },
   inSearch: {
     flexDirection: 'row',
@@ -33,7 +40,8 @@ const styles = StyleSheet.create({
   bar: {
     fontWeight: '500',
     color: 'black',
-    width: 200,
+    width: 305,
+    height: 25,
     fontSize: 15,
     marginVertical: 10,
     marginHorizontal: 5,
