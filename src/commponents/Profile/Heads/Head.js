@@ -4,7 +4,7 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 const Head = ({name}) => {
   return (
     <View style={[styles.header, styles.topArea]}>
-      <Image style={styles.Icon} source={require('../../../Icon/Icon.png')} />
+      <Image style={styles.Icon} source={require('../../../Icons/Icon.png')} />
       <Text style={styles.font}>{name}</Text>
     </View>
   );

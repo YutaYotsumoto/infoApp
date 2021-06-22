@@ -5,8 +5,8 @@ const SearchBar = () => {
   return (
     <View style={styles.barBase}>
       <View style={[styles.barStyle, styles.inSearch]}>
-        <Image style={styles.Icon} source={require('../../Icon/Search.png')} />
-        <TextInput style={styles.bar} placeholder={'テキストを入力'} />
+        <Image style={styles.Icon} source={require('../../Icons/Search.png')} />
+        <TextInput style={styles.bar} placeholder={'Search Users'} />
       </View>
     </View>
   );
