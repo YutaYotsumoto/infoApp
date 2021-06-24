@@ -1,12 +1,17 @@
 import React from 'react';
 import {View, StyleSheet, TextInput, Image} from 'react-native';
 
-const SearchBar = () => {
+const SearchBar = ({instruction, inputText, value}) => {
   return (
     <View style={styles.barBase}>
       <View style={[styles.barStyle, styles.inSearch]}>
         <Image style={styles.Icon} source={require('../../Icons/Search.png')} />
-        <TextInput style={styles.bar} placeholder={'Search Users'} />
+        <TextInput
+          style={styles.bar}
+          placeholder={instruction}
+          onChangeText={inputText}
+          value={value}
+        />
       </View>
     </View>
   );
