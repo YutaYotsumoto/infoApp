@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
   footerBase: {
     borderTopWidth: 1,
     borderColor: 'darkgrey',
+    paddingHorizontal: 20,
     // backgroundColor: '',
   },
   inFooter: {
