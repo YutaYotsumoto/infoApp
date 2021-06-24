@@ -20,8 +20,7 @@ const Screen = () => {
         'https://jsonplaceholder.typicode.com/users',
       );
       const datas = response.data;
-      setUsers(datas); //配列データ保存 usersが配列の中身の10個のオブを保持
-      // console.log(datas);
+      setUsers(datas);
     };
     getApi();
   }, []);
@@ -29,10 +28,9 @@ const Screen = () => {
   // ユーザーがSearchBar内に入力したテキストデータをQueryに保存する
   const updateQuery = input => {
     setQuery(input);
-    // console.log(query);
   };
 
-  //ユーザーがtextをインプットした時に発火するuseEffect内にfilter関数
+  //ユーザーがtextをsearchBarに入力した時(queryの値が変動した時)の動作
   useEffect(() => {
     const getApi = async () => {
       const response = await axios.get(
@@ -40,12 +38,11 @@ const Screen = () => {
       );
       const datas = response.data;
       setHeroes(datas);
-      // console.log(heroes);
     };
     getApi();
 
     const result = heroes.filter(trueData => trueData.name.includes(query));
-    console.log(result);
+    // console.log(result);
     setUsers(result);
   }, [query]);
 
