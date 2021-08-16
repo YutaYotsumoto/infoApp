@@ -11,7 +11,6 @@ import Footer from '../commponents/footer/footer';
 const Screen = () => {
   const [users, setUsers] = useState([]);
   const [query, setQuery] = useState('');
-  const [heroes, setHeroes] = useState([]);
 
   // useEffect関数内のaxiosでWebAPI取得
   useEffect(() => {
@@ -37,24 +36,17 @@ const Screen = () => {
         'https://jsonplaceholder.typicode.com/users',
       );
       const datas = response.data;
-      setHeroes(datas);
+      const result = datas.filter(data => data.name.includes(query));
+      setUsers(result);
     };
     getApi();
-
-    const result = heroes.filter(trueData => trueData.name.includes(query));
-    // console.log(result);
-    setUsers(result);
   }, [query]);
 
   return (
     <SafeAreaView backgroundColor="tomato">
       <View style={styles.view} backgroundColor="white">
         <Header text="Followers" />
-        <SearchBar
-          instruction={'Search Users'}
-          inputText={updateQuery}
-          value={query}
-        />
+        <SearchBar initialText={'Search Users'} inputText={updateQuery} />
         <FlatList
           keyExtractor={item => item.id}
           data={users}
